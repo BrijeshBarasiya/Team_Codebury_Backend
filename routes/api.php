@@ -4,6 +4,7 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,3 +24,5 @@ Route::post('login',[LoginController::class,'login']);
 
 Route::post('/emailChecker', [RegisterController::class,"emailChecker"]);
 Route::post('/emailverify', [RegisterController::class,"emailverify"]);
+Route::put('/updateProfile', [ProfileController::class,"updateProfile"]);
+Route::delete('/deleteProfile', [ProfileController::class,"deleteProfile"]);
