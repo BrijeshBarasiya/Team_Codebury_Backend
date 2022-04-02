@@ -20,9 +20,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('login',[LoginController::class,'login']);
+Route::post('/login',[LoginController::class,'login']);
 
-Route::post('/emailChecker', [RegisterController::class,"emailChecker"]);
-Route::post('/emailverify', [RegisterController::class,"emailverify"]);
-Route::put('/updateProfile', [ProfileController::class,"updateProfile"]);
-Route::delete('/deleteProfile', [ProfileController::class,"deleteProfile"]);
+Route::post('/email-checker', [RegisterController::class,"emailChecker"]);
+Route::post('/email-register', [RegisterController::class,"emailverify"]);
+Route::put('/update-profile', [ProfileController::class,"updateProfile"]);
+Route::delete('/delete-profile', [ProfileController::class,"deleteProfile"]);
