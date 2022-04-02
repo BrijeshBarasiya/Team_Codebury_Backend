@@ -38,7 +38,7 @@ class RegisterController extends Controller
         ]);
         
         $otp=$request->otp;
-        // dd($otp);
+      
         if($otp==false)
         {
             return response([
@@ -74,11 +74,7 @@ class RegisterController extends Controller
             }
         }
 
-            
-        return response([
-                "message"=>"User not verified",
-            ],406);
-        
+    
      
     }
 }
