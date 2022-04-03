@@ -68,6 +68,7 @@ class RegisterController extends Controller
             {
                 return response([
                     "message"=>"User created successfully",
+                    "user_id" => User::select('id')->where("email","=",$request->email)->get()
                 ],201);
             }
             else{
