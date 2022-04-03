@@ -4,6 +4,7 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,8 +21,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::post('login',[LoginController::class,'login']);
+Route::post('/login',[LoginController::class,'login']);
 
-Route::post('/emailChecker', [RegisterController::class,"emailChecker"]);
-Route::post('/emailverify', [RegisterController::class,"emailverify"]);
+Route::post('/email-checker', [RegisterController::class,"emailChecker"]);
+Route::post('/email-register', [RegisterController::class,"emailverify"]);
+Route::post('/update-profile', [ProfileController::class,"updateProfile"]);
+Route::delete('/delete-profile', [ProfileController::class,"deleteProfile"]);
+Route::post('/forgot-password', [LoginController::class,"forgotpass"]);
 
