@@ -59,6 +59,5 @@ Route::post('/login',[LoginController::class,'login']);
 
 Route::post('/email-checker', [RegisterController::class,"emailChecker"]);
 Route::post('/email-register', [RegisterController::class,"emailverify"]);
-Route::put('/update-profile', [ProfileController::class,"updateProfile"]);
+Route::post('/update-profile', [ProfileController::class,"updateProfile"]);
 Route::delete('/delete-profile', [ProfileController::class,"deleteProfile"]);
-

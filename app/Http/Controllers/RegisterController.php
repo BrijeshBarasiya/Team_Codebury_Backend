@@ -14,9 +14,7 @@ class RegisterController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function emailChecker(Request $request)
-    {
-
-        
+    {        
         $request->validate([
             "email" => "required|string|unique:users,email", 
         ]);
@@ -35,6 +33,7 @@ class RegisterController extends Controller
      */
     public function emailverify(Request $request)
     {
+        
         
         $verify=$request->validate([
             "email" => "string|unique:users,email",    
