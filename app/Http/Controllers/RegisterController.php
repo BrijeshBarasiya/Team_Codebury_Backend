@@ -16,10 +16,13 @@ class RegisterController extends Controller
     public function emailChecker(Request $request)
     {        
         $request->validate([
-            "email" => "required|string|email|unique:users,email", 
+            "email" => "required|string|unique:users,email", 
         ]);
-       
-        return response("success",200);
+      
+    
+        return response([
+            "message"=>"Response code is 200",
+        ],200);
     }
 
 /**
@@ -64,6 +67,7 @@ class RegisterController extends Controller
             {
                 return response([
                     "message"=>"User created successfully",
+                    "user_id" => User::select('id')->where("email","=",$request->email)->get()
                 ],201);
             }
             else{

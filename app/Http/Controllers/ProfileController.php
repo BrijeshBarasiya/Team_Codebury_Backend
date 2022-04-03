@@ -37,10 +37,10 @@ class ProfileController extends Controller
    public function deleteProfile(Request $request){
       $result =  User::destroy($request->id);
       if($result){
-          return response("Delete Profile Successfully" , 200) ;
+          return response(["messsage" => "Delete Profile Successfully" ], 200) ;
       }
       else{
-          return response("Delete Profile  UnSuccessfully", 204);
+          return response(["messsage" =>"Delete Profile  UnSuccessfully" ], 204);
       }
    }
 }
