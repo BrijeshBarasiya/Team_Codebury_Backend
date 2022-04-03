@@ -1,0 +1,971 @@
+{
+	"info": {
+		"_postman_id": "fabb652d-4e81-426e-a401-9b709486283a",
+		"name": "coddeburry",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/userpost",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"userpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userslike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/userlike",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"userlike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addlike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "passwordrerer",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "post_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/addlike",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"addlike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_all_like",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "image_url",
+							"value": "fdsfdsfsdfsdf",
+							"type": "text"
+						},
+						{
+							"key": "caption",
+							"value": "Amit sharma is good guy",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"value": "xyz",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/addpost",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"addpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "image_url",
+							"value": "tejastgffgfghh",
+							"type": "text"
+						},
+						{
+							"key": "caption",
+							"value": "teja",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/updatePost/1",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"updatePost",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "post_id",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/deletePost",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"deletePost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allpost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/dashboard",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/user-post",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"user-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postlike",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}api/postlike/2",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"postlike",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addlike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "post_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/addlike",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"addlike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}api/search/Hauck",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"search",
+						"Hauck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "comment",
+							"value": "I am dhruve",
+							"type": "text"
+						},
+						{
+							"key": "post_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/addcomment",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"addcomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postComment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/postcomment",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"postcomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateComment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "I am updated",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updatecomment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updatecomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postcomment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/postcomment",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"postcomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "Jalsa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/updatecomment",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"updatecomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteComment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/deletecomment",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"deletecomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePost",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"value": "xyz",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "caption",
+							"value": "iAmgreat2",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updatepost",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updatepost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "image_url",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "caption",
+							"value": "nice",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/addpost",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"addpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EmailCheck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"tejas123.a@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}api/email-checker",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"email-checker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePost",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"value": "xyz",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "caption",
+							"value": "iAmgreat2",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updatepost",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updatepost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProfile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "rohan@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/delete-profile",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"delete-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginCheck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "tejas@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/login",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}api/dashboard",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EmailVerify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fname\": \"Amit\",\n    \"lname\": \"Sharma\",\n    \"email\": \"amit1@gmail35.com\",\n    \"department\": \"QA\",\n    \"gender\": \"Male\",\n    \"job\": \"trainee\",\n    \"image_url\": \"helloo\",\n    \"password\": \"12345\",\n    \"dob\": \"2002-12-07\",\n    \"otp\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}api/email-register",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"email-register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchBYName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
