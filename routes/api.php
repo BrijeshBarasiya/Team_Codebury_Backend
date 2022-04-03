@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
@@ -10,6 +12,10 @@ use App\Http\Controllers\LikeController;
 
 
 
+
+
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +31,7 @@ use App\Http\Controllers\LikeController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 
 //DashboardController route
 Route::post('/dashboard',[DashboardController::class,'allData']);
@@ -47,3 +54,11 @@ Route::delete('/deletecomment',[CommentController::class,'deleteComment']);
 
 //SearchController route
 Route::get('/search/{name}',[SearchController::class,'Search']);
+
+Route::post('/login',[LoginController::class,'login']);
+
+Route::post('/email-checker', [RegisterController::class,"emailChecker"]);
+Route::post('/email-register', [RegisterController::class,"emailverify"]);
+Route::put('/update-profile', [ProfileController::class,"updateProfile"]);
+Route::delete('/delete-profile', [ProfileController::class,"deleteProfile"]);
+
