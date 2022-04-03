@@ -65,8 +65,6 @@ class CommentController extends Controller
                 'message'=>'Something went wrong'
             ],400);
         }
-      
-
     }
     public function deleteComment(Request $request)
     {

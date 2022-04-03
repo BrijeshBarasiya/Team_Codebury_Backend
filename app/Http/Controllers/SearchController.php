@@ -5,17 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Facade\FlareClient\Http\Response;
+use Illuminate\Support\Facades\DB;
 
 class SearchController extends Controller
 {
     public function Search($name)
     {
+          $customers= new User;
+          $customers=User::select("fname", "lname")
+          ->orWhere(DB::raw("concat(fname, ' ', lname)"), 'LIKE', "%".$name."%")
+          ->get();
+    //$searchName =  User::where('fname','LIKE','%'.$name.'%')
+    //               ->orWhere('lname','LIKE')->get(); //we have to change $name to $fname and concate $lname
     
-    $searchName =  User::where('name','LIKE','%'.$name.'%')->get(); //we have to change $name to $fname and concate $lname
-    if(count($searchName))
+    if(count($customers))
     {
         return Response([
-            'data' => $searchName
+            'data' => $customers
         ]);
     }
     else
