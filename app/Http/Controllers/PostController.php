@@ -116,7 +116,7 @@ class PostController extends Controller
     {    
 
         $data = count(post::find($id)->likes()->get());
-        dd($data);
+        // dd($data);
         if($data){
             return response([
                 'data'=>$data,

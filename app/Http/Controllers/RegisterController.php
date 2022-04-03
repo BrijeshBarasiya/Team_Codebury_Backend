@@ -18,10 +18,13 @@ class RegisterController extends Controller
 
         
         $request->validate([
-            "email" => "required|string|email|unique:users,email", 
+            "email" => "required|string|unique:users,email", 
         ]);
-       
-        return response("success",200);
+      
+    
+        return response([
+            "message"=>"Response code is 200",
+        ],200);
     }
 
 /**
@@ -34,7 +37,7 @@ class RegisterController extends Controller
     {
         
         $verify=$request->validate([
-            "email" => "string|email|unique:users,email",    
+            "email" => "string|unique:users,email",    
         ]);
         
         $otp=$request->otp;

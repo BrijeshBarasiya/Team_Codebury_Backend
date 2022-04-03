@@ -11,7 +11,7 @@ class DashboardController extends Controller
 {
   public function allData(Request $request)
   {
-    $userPost= post::orderBy('id', 'desc')->get();
+    $userPost= post::orderBy('created_at', 'desc')->get();
     $userLike =User::find($request->id)->likes()->get();
     $userData=User::find($request->id);
     return response([
