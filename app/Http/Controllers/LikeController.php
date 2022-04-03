@@ -7,7 +7,7 @@ use App\Models\User;
 use App\Models\like;
 class LikeController extends Controller
 {
-    public function addlike(Request $request)
+    public function addLike(Request $request)
     {
       $app = like::where('user_id', $request->user_id)->where('post_id', $request->post_id)->first();
         if (!empty($app)) {
@@ -19,8 +19,8 @@ class LikeController extends Controller
             $data = like::insert(['user_id' => $request->user_id,
                 'post_id' => $request->post_id]);
             return response([
-                'message' => 'like Added',
-            ]);
+                'message' => 'like Added SuccessFully',
+            ],200);
         }
     }
     public function userlike(Request $request){

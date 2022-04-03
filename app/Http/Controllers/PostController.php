@@ -11,25 +11,40 @@ class PostController extends Controller
     public function allPost()
     {
 
-        return post::orderBy('id', 'desc')->get();
-        
+        $postData = post::orderBy('id', 'desc')->get();
+        // Change At 3:27 AM
+        if($postData)
+        {
+            return response([
+                'data' => $postData,
+                'message' => 'Success'
+            ],200);
+        }
+        else{
+            return response([
+                'data' => $postData,
+                'message' => 'Success'
+            ],200);
+        }
     }
     
     public function userPost(Request $req)
     { 
         
         $data = User::find($req->id)->posts()->get();
-        if($data){
+        if($data)
+        {
             return response([
                 
-                'data'=>$data,
-                'message'=>'Success',
+                'data' => $data,
+                'message' => 'Success',
             ],200);
         }
-        else{
+        else
+        {
             return response([
-                'message'=>'Something went wrong'
-            ],400);
+                'message' => 'The requested resource was not found'
+            ],404);
         }
     }
     public function addPost(Request $request){
@@ -38,14 +53,18 @@ class PostController extends Controller
             'caption'=>$request->caption,
             'user_id'=>$request->user_id
         ]);
-        if($data){
+        // Change At 3:27 AM
+        if($data)
+        {
             return response([
-                'message'=>'Added comment successfully'
+                'message' => 'Successfully Added'
             ],201);
         }
-        else{
+
+        else
+        {
             return response([
-                'message'=>'Something went wrong'
+                'message' => 'Something went wrong'
             ],400);
         }
     }
@@ -53,22 +72,39 @@ class PostController extends Controller
     {
 
         $data = post::find($request->id);
+
         $data->update([
             "caption" => $request->caption,
         ]);
-        return $data;
+        // return $data;
+        // Change At 3:27 AM
+        if($data){
+            return response([
+                'message'=>'Successfully Update'
+            ],200);
+        }
+        else{
+            return response([
+                'message'=>"Can't Update This "
+            ],204);
+        }
 
     }
     
     public function deletePost(Request $request)
     {
         $data = post::destroy($request->post_id);
-        if($data){
+
+        // Change At 3:27 AM
+
+        if($data)
+        {
             return response([
                 'message'=>'Deleted successfully'
             ],200);
         }
-        else{
+        else
+        {
             return response([
                 'message'=>'Something went wrong'
             ],400);
@@ -78,7 +114,9 @@ class PostController extends Controller
 
     public function postLike($id)
     {    
+
         $data = count(post::find($id)->likes()->get());
+        dd($data);
         if($data){
             return response([
                 'data'=>$data,

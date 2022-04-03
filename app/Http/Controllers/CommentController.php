@@ -18,7 +18,8 @@ class CommentController extends Controller
         $data = post::find($request->id)->comments()->get();
         if($data){
             return response([
-                'message'=>'Deleted successfully'
+                'message'=>'success',
+                'data'=>$data
             ],200);
         }
         else{
@@ -28,7 +29,7 @@ class CommentController extends Controller
         }
     }
     
-    public function addcomment(Request $request){
+    public function addComment(Request $request){
         $data=comment::insert([
             'comment'=>$request->comment,
             'post_id'=>$request->post_id,
@@ -46,18 +47,41 @@ class CommentController extends Controller
         }
     }
 
-    public function update(Request $request)
+    public function updateComment(Request $request)
     {
         $UpdateComment = comment::find($request->id);
-        $UpdateComment->update([
+        $data=$UpdateComment->update([
             "comment" => $request->comment,
+            
         ]);
-    return $UpdateComment;
+        if($data){
+            return response([
+                'message'=>'Updated successfully',
+                'comment_id'=>$UpdateComment->id
+            ],201);
+        }
+        else{
+            return response([
+                'message'=>'Something went wrong'
+            ],400);
+        }
+      
 
     }
     public function deleteComment(Request $request)
     {
-        return comment::destroy($request->id);
+        $data= comment::destroy($request->id);
+        if($data){
+            return response([
+                'message'=>'Comment deleted successfully',
+         
+            ],200);
+        }
+        else{
+            return response([
+                'message'=>'Something went wrong'
+            ],400);
+        }
 
     }
   
